@@ -14,6 +14,8 @@ There might be other ones in the system, representing different households, comp
 
 There is a [Python Iroha library](https://github.com/hyperledger/iroha-python/) installed in the system, so we can interact with Iroha from within a Python code
 
+Please, wait for the system to initialize. You should see a command prompt (`$ `) after the configuration. This may take up to several minutes.
+
 Check that Iroha is up and running:
 `docker-compose -f /opt/sandbox/docker-compose.yml ps`{{execute}}
 
