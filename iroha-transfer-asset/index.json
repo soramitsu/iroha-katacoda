@@ -1,0 +1,76 @@
+{
+  "noindex": true,
+  "title": "Hyperledger Iroha Sandbox",
+  "description": "Play with Hyperledger Iroha blockhain solution using Python library",
+  "details": {
+      "steps": [
+        {
+          "title": "Step 1",
+          "code": "step1-foreground.sh",
+          "text": "step1.md"
+        },
+          {
+            "title": "Step 2",
+            "text": "step2.md"
+          },
+          {
+            "title": "Step 3",
+            "text": "step3.md"
+          },
+          {
+            "title": "Step 4",
+            "text": "step4.md"
+          },
+          {
+            "title": "Step 5",
+            "text": "step5.md"
+          },
+          {
+            "title": "Step 6",
+            "text": "step6.md"
+          }
+      ],
+      "intro": {
+        "text": "intro.md",
+        "courseData": "intro-background.sh",
+        "credits": ""
+      },
+      "finish": {
+        "text": "finish.md"
+      },
+      "assets": {
+        "host01": [
+            {
+                "file": "iroha-config/*",
+                "target": "/opt/sandbox/iroha-config"
+            },
+            {
+                "file": "docker-compose.yml",
+                "target": "/opt/sandbox"
+            },
+            {
+                "file": "wait.sh",
+                "target": "/tmp/",
+                "chmod": "+x"
+            },
+            {
+                "file": "client/__init__.py",
+                "target": "/opt/sandbox/iroha-config"
+            }
+        ]
+      }
+  },
+  "files": [
+    "client.py",
+    "add-asset-quantity.py"
+  ],
+  "environment": {
+    "hidefinish": true,
+    "uilayout": "editor-terminal",
+    "uisettings": "python",
+    "uieditorpath": "./client"
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}

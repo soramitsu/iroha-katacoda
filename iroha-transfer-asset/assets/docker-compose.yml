@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  node:
+    image: hyperledger/iroha:1.0.0
+    container_name: iroha
+    environment:
+      - KEY=node1
+      - IROHA_POSTGRES_HOST=postgres
+    ports:
+      - 50051:50051
+    depends_on:
+      - postgres
+    volumes:
+      - ./iroha-config:/opt/iroha_data
+    networks:
+      - iroha
+
+  postgres:
+    image: postgres:9.6
+    container_name: postgres
+    environment:
+      - POSTGRES_PASSWORD=postgres
+    networks:
+      - iroha
+    command: -c 'max_prepared_transactions=100'
+
+networks:
+  iroha:
