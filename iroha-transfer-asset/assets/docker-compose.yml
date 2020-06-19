@@ -12,7 +12,7 @@ services:
     depends_on:
       - postgres
     volumes:
-      - ./iroha-config:/opt/iroha_data
+      - ./iroha-config/iroha-config:/opt/iroha_data
     networks:
       - iroha
 

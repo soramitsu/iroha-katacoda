@@ -9,5 +9,5 @@ mv /opt/sandbox/iroha-config/__init__.py /root/client
 systemctl restart docker
 pushd /opt/sandbox/iroha-config
 docker-compose up -d
-pip3 install iroha
+pip3.7 install iroha
 touch /tmp/bootstrap-done
